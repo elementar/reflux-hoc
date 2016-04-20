@@ -63,6 +63,7 @@ const ConnectedComponent = connect(Store, 'onStoreChange', Component);
 
 ### connectToData
 
+```js
 // connectToData :: { b: Store } -> ({ a: * }) -> Component -> Component
 connectToData({ PersonStore, PostStore }, (props, actionData) => ( { persons: PersonStore.getPersons(), posts: PostStore.getPosts() } ), Component);
 ```
@@ -80,7 +81,7 @@ connect([Store1, Store2], CallbackName, Component);
 const connectToStores = connect([Store1, Store2]);
 
 connectToStores('onStoresChange', Compnent);
-
+```
 
 ## License
 
